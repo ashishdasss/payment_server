@@ -99,7 +99,7 @@ app.get('/success', async (req, res) => {
         paypal.payment.execute(paymentId, execute_payment_json, function (error, payment) {
             if (error) {
                 console.log(error)
-                return res.redirect("http://localhost:5173/failed");
+                return res.redirect("https://payment-server-4do1.vercel.app/failed");
             } else {
                 console.log("Execute Payment Response");
                 // console.log(payment);
@@ -110,7 +110,7 @@ app.get('/success', async (req, res) => {
 
                 console.log("transactions", transactions);
 
-                return res.redirect("http://localhost:5173/success");
+                return res.redirect("https://payment-server-4do1.vercel.app/success");
             }
         })
 
@@ -124,7 +124,7 @@ app.get('/success', async (req, res) => {
 
 app.get('/failed', async (req, res) => {
 
-    return res.redirect("http://localhost:5173/failed");
+    return res.redirect("https://payment-server-4do1.vercel.app/failed");
 })
 
 
