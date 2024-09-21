@@ -65,6 +65,7 @@ app.post('/payment', async(req,res)=>{
         await paypal.payment.create(create_payment_json, function(error, payment) {
             if (error){
                 console.log('error')
+                return res.status(400).json({error});
             }else{
                 console.log("Create Payment Response");
                 // console.log(payment);
@@ -75,6 +76,7 @@ app.post('/payment', async(req,res)=>{
         })
     }catch (error){
         console.log(error)
+        return res.status(400).json({error});
     }
 })
 
