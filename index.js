@@ -23,7 +23,7 @@ const verifyCaptcha = async (captchaValue) => {
 app.get('/', (req, res)=>{
     res.send('Hello World')
 })
-
+    
 app.post('/payment', async(req,res)=>{
 
     const { captcha } = req.body; // Get captcha value from request
@@ -123,11 +123,10 @@ app.get('/success', async (req, res) => {
 
 
 app.get('/failed', async (req, res) => {
-
     return res.redirect("https://payment-server-4do1.vercel.app/failed");
 })
 
 
-app.listen(8000, () => {
-    console.log('Server is running on port 8000')
-})
+// app.listen(8000, () => {
+//     console.log('Server is running on port 8000')
+// })
