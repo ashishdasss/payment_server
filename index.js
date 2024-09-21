@@ -44,8 +44,8 @@ app.post('/payment', async(req,res)=>{
                 "payment_method": "paypal"
             },
             "redirect_urls": {
-                "return_url": "https://payment-server-two.vercel.app/success",
-                "cancel_url": "https://payment-server-two.vercel.app/failed"
+                "return_url": "https://payment-server-2.vercel.app/success",
+                "cancel_url": "https://payment-server-2.vercel.app/failed"
             },
             "transactions": [{
                 "item_list": {
