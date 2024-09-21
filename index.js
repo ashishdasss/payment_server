@@ -2,10 +2,13 @@ const express = require('express')
 const paypal = require('paypal-rest-sdk')
 const cors = require('cors')
 const axios = require('axios');
+var bodyParser = require("body-parser");
 
 const app = express()
 
 app.use(cors());
+app.use(bodyParser.json({ limit: "50mb" }));
+
 
 paypal.configure({
     'mode': 'sandbox', 
